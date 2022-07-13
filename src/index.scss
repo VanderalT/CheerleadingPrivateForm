@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+//60/30/10 rule for colours
+$mainColour: #0000;
+$secondaryColour: #5800FF;
+$accentOne: #E900FF;
+$accentTwo: #FFC600;
+
+@mixin pageFont {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+nav {
+    width: 100%;
+    background-color: $secondaryColour;
+    @include pageFont();
+}
