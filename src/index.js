@@ -72,7 +72,17 @@ class Plan extends React.Component {
   render() {
     return (
       <div className='plan-container' id='PlanSection'>
-        <h1>Plan</h1>
+        <div className='plan-headergroup'>
+          <h1>Plan</h1>
+          <h2>Through working on my own tumble, the advice I have recieved from many a cheer coach and coaching <br></br> I have condensed the knowlege I wish I knew for each of the cheerleading levels.</h2>
+        </div>
+        <div className='plan-main'>
+          <ul className='plan-list'>
+            <li id='levelOne'>Level 1</li>
+            <li id='levelTwo'>Level 2</li>
+            <li id='levelThree'>Level 3</li>
+          </ul>
+        </div>
       </div>
     )
   }
