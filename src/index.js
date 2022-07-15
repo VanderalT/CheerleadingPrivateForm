@@ -1,20 +1,44 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import handleViewPort from 'react-in-viewport';
+import testimonialContainers from './testimonials';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
+
+function TransformScroll(event){
+  if (!event.deltaY) {
+    return;
+  }
+
+  event.currentTarget.scrollLeft += event.deltaY + event.deltaX;
+}
+
+var ScrollElement = document.scrollingElement || document.documentElement;
+ScrollElement.addEventListener('wheel', TransformScroll);
+
 
 class Navbar extends React.Component {
   render() {
     return (
       <nav className='nav-bar'>
         <ul>
-          <li>Home</li>
-          <li>Testimonials</li>
-          <li>Plan</li>
-          <li>Contact</li>
+          <li><a href='#HeroSection'>Home</a></li>
+          <li><a href='#TestimonialSection'>Testimonials</a></li>
+          <li><a href='#PlanSection'>Plan</a></li>
+          <li><a href='#ContactSection'>Contact</a></li>
         </ul>
       </nav>
+    )
+  }
+}
+
+class Hero extends React.Component {
+  render(){
+    //Need to create image carousel
+    return(
+      <div className='place-holder' id='HeroSection'>
+
+      </div>
     )
   }
 }
@@ -22,7 +46,7 @@ class Navbar extends React.Component {
 class Home extends React.Component {
   render() {
     return (
-      <div className='home-container'>
+      <div className='home-container' id='HomeSection'>
         <div className="home-headergroup">
           <h1>Private Tumble Lessons</h1>
           <h2>With Coach Van</h2>
@@ -34,16 +58,22 @@ class Home extends React.Component {
 
 class Testimonials extends React.Component {
   render() {
+    //Need to create floating sections that contain feedback from Privates
     return (
-      <h1>This is a new section</h1>
+      <div className='testimonial-container' id='TestimonialSection'>
+        <h1>Testimonials</h1>
+      </div>
     )
   }
 }
 
 class Plan extends React.Component {
+  //Need to create
   render() {
     return (
-      <h1>This is a new section</h1>
+      <div className='plan-container' id='PlanSection'>
+        <h1>Plan</h1>
+      </div>
     )
   }
 }
@@ -51,7 +81,9 @@ class Plan extends React.Component {
 class Contact extends React.Component {
   render() {
     return (
-      <h1>This is a new section</h1>
+      <div className='contact-container' id='ContactSection'>
+        <h1>Contact</h1>
+      </div>
     )
   }
 }
@@ -60,6 +92,7 @@ class Body extends React.Component {
   render() {
     return (
       <div className='website-container'>
+        <Hero />
         <Home />
         <Testimonials />
         <Plan />

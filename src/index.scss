@@ -5,24 +5,37 @@
 }
 
 //60/30/10 rule for colours
-$mainColour: #0000;
-$secondaryColour: #5800FF;
-$accentOne: #E900FF;
+$mainColour: #000000;
+$secondaryColour: #E900FF;
+$accentOne: #5800FF;
 $accentTwo: #FFC600;
 
 @mixin pageFont {
     font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+}
+
+@mixin headers {
+    font-size: 5vw;
+    text-shadow: 5px 5px $accentOne;
 }
 
 
 .nav-bar {
     position: fixed;
-    width: 100%;
-    height: 100px;
+    width: 100vw;
+    height: fit-content;
     bottom: 0px;
     background-color: $secondaryColour;
     @include pageFont();
     font-size: 2vw;
+    z-index: 1;
+    opacity: 75%;
+    transition: all 0.5s ease-in-out;
+
+    &:hover{
+        opacity: 100%;
+    }
 
     ul {
         display: flex;
@@ -32,30 +45,91 @@ $accentTwo: #FFC600;
 
         li{
             margin:  3vh;
-            width: fit-content;
-            color: #FFFF;
 
-            &:hover {
-                cursor: pointer;
-                text-decoration: underline;
+            a{
+                width: fit-content;
+                color: #FFFF;
+                text-decoration: none;
+                text-shadow: 1px 1px $accentTwo;
+                text-decoration: none;
+
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                    text-decoration-color: $accentTwo;
+                }
             }
         }
     }
 }
 
 .website-container{
-    height: 100vh;
-    width: 300vw;
+    width: max-content;
+    height: 98vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    background-color: $mainColour;
+}
+
+.place-holder {
+    height: 100%;
+    width: 50vw;
+    background-color: $accentOne;
 }
 
 .home-container{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
     .home-headergroup {
         @include pageFont();
+        text-align: right;
+        align-self: right;
+        padding-right: 20px;
+        h1 {
+            @include headers();
+        }
+        h2 {
+            font-size: 3vw;
+            text-shadow: 2px 2px $accentTwo;
+        }
+    }
+}
+
+.testimonial-container{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    h1 {
+        @include pageFont();
+        @include headers();
+        margin-left: 20px;
+    }
+}
+
+.plan-container{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    h1 {
+        @include pageFont();
+        @include headers();
+        margin-left: 20px;
+    }
+}
+
+.contact-container{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    h1 {
+        @include pageFont();
+        @include headers();
+        margin-left: 20px;
     }
 }
 

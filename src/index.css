@@ -6,12 +6,21 @@
 
 .nav-bar {
   position: fixed;
-  width: 100%;
-  height: 100px;
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   bottom: 0px;
-  background-color: #5800FF;
+  background-color: #E900FF;
   font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
   font-size: 2vw;
+  z-index: 1;
+  opacity: 75%;
+  transition: all 0.5s ease-in-out;
+}
+.nav-bar:hover {
+  opacity: 100%;
 }
 .nav-bar ul {
   display: flex;
@@ -21,28 +30,99 @@
 }
 .nav-bar ul li {
   margin: 3vh;
+}
+.nav-bar ul li a {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px #FFC600;
+  text-decoration: none;
 }
-.nav-bar ul li:hover {
+.nav-bar ul li a:hover {
   cursor: pointer;
   text-decoration: underline;
+  -webkit-text-decoration-color: #FFC600;
+          text-decoration-color: #FFC600;
 }
 
 .website-container {
-  height: 100vh;
-  width: 300vw;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 98vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  background-color: #000000;
+}
+
+.place-holder {
+  height: 100%;
+  width: 50vw;
+  background-color: #5800FF;
 }
 
 .home-container {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
 }
 .home-container .home-headergroup {
   font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  text-align: right;
+  align-self: right;
+  padding-right: 20px;
+}
+.home-container .home-headergroup h1 {
+  font-size: 5vw;
+  text-shadow: 5px 5px #5800FF;
+}
+.home-container .home-headergroup h2 {
+  font-size: 3vw;
+  text-shadow: 2px 2px #FFC600;
+}
+
+.testimonial-container {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+.testimonial-container h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  font-size: 5vw;
+  text-shadow: 5px 5px #5800FF;
+  margin-left: 20px;
+}
+
+.plan-container {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+.plan-container h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  font-size: 5vw;
+  text-shadow: 5px 5px #5800FF;
+  margin-left: 20px;
+}
+
+.contact-container {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+.contact-container h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+  font-size: 5vw;
+  text-shadow: 5px 5px #5800FF;
+  margin-left: 20px;
 }/*# sourceMappingURL=index.css.map */
