@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import handleViewPort from 'react-in-viewport';
+import handleViewPort, { customProps } from 'react-in-viewport';
 import testimonialContainers from './testimonials';
+import { LevelOnePlan } from './plan-section/plan';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
@@ -67,8 +68,34 @@ class Testimonials extends React.Component {
   }
 }
 
+function PlanList () {
+  function RenderPlan(i) {
+    if(i == 1){
+      console.log('Level one clicked');
+    }
+    if(i == 2){
+      console.log('Level two clicked');
+    }
+    if(i == 3){
+      console.log('Level three clicked');
+    }
+  }
+
+  return(
+    <div className='plan-main'>
+      <ul className='plan-list'>
+        <li onClick={()=> RenderPlan(1)}>Level 1</li>
+        <li onClick={()=> RenderPlan(2)}>Level 2</li>
+        <li onClick={()=> RenderPlan(3)}>Level 3</li>
+      </ul>
+    </div>
+  )
+}
+
+
 class Plan extends React.Component {
   //Need to create
+
   render() {
     return (
       <div className='plan-container' id='PlanSection'>
@@ -76,13 +103,7 @@ class Plan extends React.Component {
           <h1>Plan</h1>
           <h2>Through working on my own tumble, the advice I have recieved from many a cheer coach and coaching <br></br> I have condensed the knowlege I wish I knew for each of the cheerleading levels.</h2>
         </div>
-        <div className='plan-main'>
-          <ul className='plan-list'>
-            <li id='levelOne'>Level 1</li>
-            <li id='levelTwo'>Level 2</li>
-            <li id='levelThree'>Level 3</li>
-          </ul>
-        </div>
+        <PlanList />
       </div>
     )
   }
