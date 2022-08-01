@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
@@ -123,9 +124,29 @@
   margin-left: 4vw;
   margin-top: 2vh;
 }
-.plan-container .plan-main {
-  height: 20px;
-  width: 100vw;
+.plan-container .plan-main .hidden {
+  display: none;
+}
+.plan-container .plan-main .show {
+  display: inline-block;
+  margin-top: 30vh;
+  margin-left: 15vw;
+  padding: 20px;
+  text-shadow: 1px 1px #FFC600;
+  background-color: #E900FF;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+}
+.plan-container .plan-main .show button {
+  color: #FFFFFF;
+  background-color: #5800FF;
+  box-shadow: 2px 2px #FFC600;
+}
+.plan-container .plan-main .show button:hover {
+  cursor: pointer;
+  background-color: #FFC600;
+  box-shadow: 2px 2px #5800FF;
+  text-shadow: 2px 2px #5800FF;
 }
 .plan-container .plan-main ul {
   display: flex;

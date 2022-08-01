@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
@@ -128,8 +129,31 @@ $accentTwo: #FFC600;
         }
     }
     .plan-main{
-        height: 20px;
-        width: 100vw;
+        .hidden {
+            display: none;
+        }
+        .show {
+            display: inline-block;
+            margin-top: 30vh;
+            margin-left: 15vw;
+            padding: 20px;
+            text-shadow: 1px 1px $accentTwo;
+            background-color: $secondaryColour;
+            @include pageFont();
+
+            button {
+                color: #FFFFFF;
+                background-color: $accentOne;
+                box-shadow: 2px 2px $accentTwo;
+                
+                &:hover{
+                    cursor: pointer;
+                    background-color: $accentTwo;
+                    box-shadow: 2px 2px $accentOne;
+                    text-shadow: 2px 2px $accentOne;
+                }
+            }
+        }
         ul {
             display: flex;
             flex-direction: row;
@@ -152,6 +176,7 @@ $accentTwo: #FFC600;
                 }
             }
         }
+
     }
 
 }
@@ -167,4 +192,7 @@ $accentTwo: #FFC600;
         margin-left: 20px;
     }
 }
+
+
+
 
