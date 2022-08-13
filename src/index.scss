@@ -7,13 +7,14 @@
 
 //60/30/10 rule for colours
 $mainColour: #000000;
+$mainAltColour: #FFFFFF;
 $secondaryColour: #E900FF;
 $accentOne: #5800FF;
 $accentTwo: #FFC600;
 
 @mixin pageFont {
     font-family: Arial, Helvetica, sans-serif;
-    color: $mainColour;
+    color: $mainAltColour;
 }
 
 @mixin headers {
@@ -21,8 +22,11 @@ $accentTwo: #FFC600;
     text-shadow: 5px 5px $accentOne;
 }
 
-//hero-section
+.website-container{
+    background-color: $mainColour;
+}
 
+//hero-section
 .hero-section{
     width: 100vw;
     height: 100vh;
@@ -45,6 +49,7 @@ $accentTwo: #FFC600;
             margin-left: 20px;
             h1{
                 font-size: 5vw;
+                text-shadow: 5px 5px 10px #5800FF;
             }
             h2{
                 font-size: 2vw;
@@ -58,12 +63,14 @@ $accentTwo: #FFC600;
 .testimonials-container{
     margin: 5vw;
     width: 90vw;
+    min-height: 100vh;
     @include pageFont;
 
     .testimonials-headers{
         text-align: center;
         h1{
             font-size: 3vw;
+            text-shadow: 3px 3px 10px #5800FF;
         }
     }
 
@@ -89,6 +96,7 @@ $accentTwo: #FFC600;
 
 .levels-container{
     width: 100%;
+    min-height: 100vh;
     @include pageFont;
     .levels-header{
         text-align: center;

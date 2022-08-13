@@ -4,7 +4,7 @@ class LevelOne extends React.Component {
     render(){
         return(
             <div className='level-one-container'>
-                <h1>LevelOne</h1>
+                <h1>Level One</h1>
             </div>
         )
     }
