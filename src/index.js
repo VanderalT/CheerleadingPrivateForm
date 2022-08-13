@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import Hero from './hero';
+import Testimonials from './testimonials/testimonials-container';
 import './index.scss';
 
 /*
@@ -17,6 +18,7 @@ class Page extends React.Component {
     return(
       <div className='website-container'>
         <Hero/>
+        <Testimonials />
       </div>
     )
   }

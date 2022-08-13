@@ -34,4 +34,33 @@
 }
 .hero-section .header-group .headers h2 {
   font-size: 2vw;
+}
+
+.testimonials-container {
+  margin: 5vw;
+  width: 90vw;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+}
+.testimonials-container .testimonials-headers {
+  text-align: center;
+}
+.testimonials-container .testimonials-headers h1 {
+  font-size: 3vw;
+}
+.testimonials-container .testimonial-inner-container {
+  margin-top: 20px;
+}
+.testimonials-container .testimonial-inner-container .testimonial {
+  background-color: #5800FF;
+  color: #FFFFFF;
+  width: 25vw;
+  padding: 20px;
+  border-radius: 25px;
+}
+.testimonials-container .testimonial-inner-container .testimonial:nth-child(odd) {
+  margin-left: 60%;
+}
+.testimonials-container .testimonial-inner-container .testimonial:nth-child(even) {
+  margin-left: 10%;
 }/*# sourceMappingURL=index.css.map */

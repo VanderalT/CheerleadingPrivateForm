@@ -21,6 +21,8 @@ $accentTwo: #FFC600;
     text-shadow: 5px 5px $accentOne;
 }
 
+//hero-section
+
 .hero-section{
     width: 100vw;
     height: 100vh;
@@ -46,6 +48,38 @@ $accentTwo: #FFC600;
             }
             h2{
                 font-size: 2vw;
+            }
+        }
+    }
+}
+
+//testimonial section
+
+.testimonials-container{
+    margin: 5vw;
+    width: 90vw;
+    @include pageFont;
+
+    .testimonials-headers{
+        text-align: center;
+        h1{
+            font-size: 3vw;
+        }
+    }
+
+    .testimonial-inner-container{
+        margin-top: 20px;
+        .testimonial{
+            background-color: $accentOne;
+            color: #FFFFFF;
+            width: 25vw;
+            padding: 20px;
+            border-radius: 25px;
+            &:nth-child(odd){
+                margin-left: 60%;
+            }
+            &:nth-child(even){
+                margin-left: 10%;
             }
         }
     }
