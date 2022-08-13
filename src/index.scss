@@ -84,3 +84,20 @@ $accentTwo: #FFC600;
         }
     }
 }
+
+//Levels Container
+
+.levels-container{
+    width: 100%;
+    @include pageFont;
+    .levels-header{
+        text-align: center;
+        h1{
+            font-size: 3vw;
+        }
+    }
+    .levels-content-container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

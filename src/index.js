@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import Hero from './hero';
+import Levels from './levels/levels';
 import Testimonials from './testimonials/testimonials-container';
 import './index.scss';
 
@@ -19,6 +20,7 @@ class Page extends React.Component {
       <div className='website-container'>
         <Hero/>
         <Testimonials />
+        <Levels />
       </div>
     )
   }
