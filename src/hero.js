@@ -13,7 +13,7 @@ class Hero extends React.Component {
                         <h1>Coach Van</h1>
                         <h2>Private Tumble Lessons</h2>
                         <div className='book-now-button'>
-                            <h2>BOOK NOW!</h2>
+                            <h2><a href='#contact-form'>GET IN TOUCH!</a></h2>
                         </div>
                     </div>
                 </div>

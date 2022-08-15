@@ -19,8 +19,8 @@ $background-gradient: linear-gradient(164deg, rgba(88,0,255,1) 40%, rgba(233,0,2
 }
 
 @mixin headers {
-    font-size: 5vw;
-    text-shadow: 5px 5px $accentOne;
+    font-size: 3vw;
+    text-shadow: 3px 3px 5px #5800FF;
 }
 
 .website-container{
@@ -62,7 +62,10 @@ $background-gradient: linear-gradient(164deg, rgba(88,0,255,1) 40%, rgba(233,0,2
                 padding: 5px;
                 border-radius: 10px;
                 transition: ease-in-out 0.20s;
-
+                a{
+                    text-decoration: none;
+                    color: $mainAltColour;
+                }
                 &:hover{
                     background-color: $secondaryColour;
                     cursor: pointer;
@@ -84,8 +87,7 @@ $background-gradient: linear-gradient(164deg, rgba(88,0,255,1) 40%, rgba(233,0,2
     .testimonials-headers{
         text-align: center;
         h1{
-            font-size: 3vw;
-            text-shadow: 3px 3px 5px #5800FF;
+            @include headers;
         }
     }
 
@@ -111,13 +113,12 @@ $background-gradient: linear-gradient(164deg, rgba(88,0,255,1) 40%, rgba(233,0,2
 
 .levels-container{
     width: 100%;
-    padding-bottom: 30vh;
+    padding-bottom: 10vh;
     @include pageFont;
     .levels-header{
         text-align: center;
         h1{
-            font-size: 3vw;
-            text-shadow: 3px 3px 5px #5800FF;
+            @include headers;
         }
     }
     .levels-content-container{
@@ -168,4 +169,28 @@ $background-gradient: linear-gradient(164deg, rgba(88,0,255,1) 40%, rgba(233,0,2
             }
         }
     }
+}
+
+//Contact form container
+
+.contact-form-container{
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: $background-gradient;
+    h1{
+        @include headers;
+        @include pageFont;
+    }
+    .contact-form{
+        width: 50vw;
+        height: 1500px;
+    }
+}
+
+footer{
+    width: 100%;
+    height: 15vh;
 }

@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import Hero from './hero';
 import Levels from './levels/levels';
 import Testimonials from './testimonials/testimonials-container';
+import Form from './contact-form';
+import Footer from './footer/footer';
 import './index.scss';
 
 /*
@@ -21,6 +23,8 @@ class Page extends React.Component {
         <Hero/>
         <Testimonials />
         <Levels />
+        <Form />
+        <Footer />
       </div>
     )
   }

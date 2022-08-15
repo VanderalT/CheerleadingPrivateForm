@@ -50,6 +50,10 @@
   border-radius: 10px;
   transition: ease-in-out 0.2s;
 }
+.hero-section .header-group .headers .book-now-button a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
 .hero-section .header-group .headers .book-now-button:hover {
   background-color: #E900FF;
   cursor: pointer;
@@ -89,7 +93,7 @@
 
 .levels-container {
   width: 100%;
-  padding-bottom: 30vh;
+  padding-bottom: 10vh;
   font-family: Arial, Helvetica, sans-serif;
   color: #FFFFFF;
 }
@@ -161,4 +165,28 @@
 .levels-container .levels-content-container .level-two-container ul li::marker,
 .levels-container .levels-content-container .level-three-container ul li::marker {
   color: #FFC600;
+}
+
+.contact-form-container {
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(164deg, rgb(88, 0, 255) 40%, rgb(233, 0, 255) 100%);
+}
+.contact-form-container h1 {
+  font-size: 3vw;
+  text-shadow: 3px 3px 5px #5800FF;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+}
+.contact-form-container .contact-form {
+  width: 50vw;
+  height: 1500px;
+}
+
+footer {
+  width: 100%;
+  height: 15vh;
 }/*# sourceMappingURL=index.css.map */
