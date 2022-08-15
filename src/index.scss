@@ -11,6 +11,7 @@ $mainAltColour: #FFFFFF;
 $secondaryColour: #E900FF;
 $accentOne: #5800FF;
 $accentTwo: #FFC600;
+$background-gradient: linear-gradient(164deg, rgba(88,0,255,1) 40%, rgba(233,0,255,1) 100%);
 
 @mixin pageFont {
     font-family: Arial, Helvetica, sans-serif;
@@ -28,7 +29,7 @@ $accentTwo: #FFC600;
 
 //hero-section
 .hero-section{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     @include pageFont;
@@ -49,10 +50,24 @@ $accentTwo: #FFC600;
             margin-left: 20px;
             h1{
                 font-size: 5vw;
-                text-shadow: 5px 5px 10px #5800FF;
+                text-shadow: 3px 3px 5px #5800FF;
             }
             h2{
                 font-size: 2vw;
+            }
+            .book-now-button{
+                background-color: $accentOne;
+                width: fit-content;
+                margin-top: 10px;
+                padding: 5px;
+                border-radius: 10px;
+                transition: ease-in-out 0.20s;
+
+                &:hover{
+                    background-color: $secondaryColour;
+                    cursor: pointer;
+                    transition: ease-in-out 0.20s;
+                }
             }
         }
     }
@@ -70,7 +85,7 @@ $accentTwo: #FFC600;
         text-align: center;
         h1{
             font-size: 3vw;
-            text-shadow: 3px 3px 10px #5800FF;
+            text-shadow: 3px 3px 5px #5800FF;
         }
     }
 
@@ -96,16 +111,61 @@ $accentTwo: #FFC600;
 
 .levels-container{
     width: 100%;
-    min-height: 100vh;
+    padding-bottom: 30vh;
     @include pageFont;
     .levels-header{
         text-align: center;
         h1{
             font-size: 3vw;
+            text-shadow: 3px 3px 5px #5800FF;
         }
     }
     .levels-content-container{
         display: flex;
         justify-content: space-evenly;
+        height: 100%;
+        .level-one-container, 
+        .level-two-container, 
+        .level-three-container{
+            margin-top: 20px;
+            min-width: 25vw;
+            max-width: 30vw;
+            background-color: $accentOne;
+            background: $background-gradient;
+            padding: 20px;
+            border-radius: 25px;
+            h1{
+                text-align: center;
+                margin-bottom: 20px;
+                &:nth-child(3){
+                    padding-top: 20px;
+                }
+            }
+            p{
+                a{
+                    color: $mainAltColour;
+                    text-decoration-color: $accentTwo;
+                    transition: ease-in-out 0.20s;
+                    &:hover{
+                        color: $accentTwo;
+                        text-decoration-color: $mainAltColour;
+                        transition: ease-in-out 0.20s;
+                    }
+                }
+            }
+            ul{
+                margin-left:20px;
+                display: flex;
+                justify-content: space-around;
+                gap: 30px;
+                flex-wrap: wrap;
+                li{
+                    padding-left: 0px;
+                    &::marker{
+                        color: $accentTwo;
+                    }
+                }
+            }
+        }
     }
 }
