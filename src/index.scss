@@ -22,6 +22,8 @@ $background-gradient-two: linear-gradient(164deg, $accentOne 40%, $accentTwo 100
 
 @mixin headers {
     font-size: 10vw;
+    margin-right: 5px;
+    margin-left: 5px;
     text-shadow: 3px 3px 5px $secondaryColour;
 }
 
