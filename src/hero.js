@@ -1,4 +1,6 @@
 import React from 'react';
+import logo from './img/instagram-logo.png';
+import heroImage from './img/coach-van.jpg';
 import './index.scss';
 
 class Hero extends React.Component {
@@ -6,14 +8,16 @@ class Hero extends React.Component {
         return(
             <div className='hero-section'>
                 <div className='hero-photos'>
-                    <div className='placeholder'/>
+                    <img src={heroImage} alt='Coach Van' className='hero-image' />
                 </div>
                 <div className='header-group'>
                     <div className='headers'>
                         <h1>Coach Van</h1>
-                        <h2>Private Tumble Lessons</h2>
                         <div className='book-now-button'>
-                            <h2><a href='#contact-form'>GET IN TOUCH!</a></h2>
+                            <h2><a href='#contact-form'>Contact Me About Private Tumble Lessons</a></h2>
+                        </div>
+                        <div className='social-media'>
+                            <a href='https://www.instagram.com/vanderaltalagi/'><img src={logo} alt='instagram' className='instagram-logo '></img></a>
                         </div>
                     </div>
                 </div>
