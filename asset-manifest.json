@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CheerleadingPrivateForm/static/css/main.3a502a4b.css",
+    "main.js": "/CheerleadingPrivateForm/static/js/main.2d29d548.js",
+    "static/media/instagram-logo.png": "/CheerleadingPrivateForm/static/media/instagram-logo.bb8a77bfaa323012e852.png",
+    "static/media/coach-van.jpg": "/CheerleadingPrivateForm/static/media/coach-van.dc22f8ab341b0dac9330.jpg",
+    "index.html": "/CheerleadingPrivateForm/index.html",
+    "main.3a502a4b.css.map": "/CheerleadingPrivateForm/static/css/main.3a502a4b.css.map",
+    "main.2d29d548.js.map": "/CheerleadingPrivateForm/static/js/main.2d29d548.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3a502a4b.css",
+    "static/js/main.2d29d548.js"
+  ]
+}
